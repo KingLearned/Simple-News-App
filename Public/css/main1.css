@@ -1,0 +1,696 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'bebas';
+    src: url('../fonts/FontsFree-Net-Bebas-Regular.ttf');
+}
+@font-face {
+    font-family: 'playfair';
+    src: url('../fonts/Playfair-Regular.ttf');
+}
+.pre_loader{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 99.425vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+.pre_loader img{
+    width: 10%;
+}
+body{
+    width: 100%;
+    height: auto;
+    font-family: bebas, playfair;
+    letter-spacing: 1px;
+}
+.top{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/stockphoto.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.top img{
+    width: 50%;
+}
+.top h1{
+    font-family: bebas; 
+    color: black;
+    font-size: 2vw;
+    text-shadow: 2px 2px 5px white;
+    transition: 0.5s;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background: red;
+    box-shadow: 0 2px 5px black;
+    z-index: 99;
+}
+.menu a{
+    color: white;
+    font: bolder 1.7vw bebas;
+    letter-spacing: 1px;
+    margin: 5px 10px;
+}
+.menu a:hover{
+    color: black;
+}
+.search input{
+    width: 50%;
+    border: 1px solid black;
+    background-color: white;
+    padding: 8px 8px;
+    outline: none;
+    transition: 0.9s;
+}
+.search input:focus{
+    width: 100%;
+    transition: 1s;
+}
+.search input::placeholder{
+    font-family: bebas;
+}
+.search{
+    display: flex;
+}
+.search button{
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    font: bold 18px bebas;
+    padding: 6.5px 14px;
+}
+.logo img{
+    transition: 0.5s;
+    margin: 0 5px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+.mainsection{
+    padding: 20px 0 0 0;
+    display: flex;
+}
+.main-article{
+    margin: 0 0 0 15px;
+    padding: 5px 0 0 25px;
+    border-left: 2px solid gray;
+    width: 55%;
+    height: auto;
+}
+/* ############################################## */
+/* ############################################## */
+.main-article .politics_article,
+.main-article .national_article,
+.main-article .sports_article,
+.main-article .entertainment_article,
+.main-article .foreign_article
+{
+    position: relative;
+    padding: 5px;
+    /* height: 75vh; */
+    overflow: hidden;
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+    margin-bottom: 15px;
+}
+.main-article .politics_article:hover,
+.main-article .national_article:hover,
+.main-article .sports_article:hover,
+.main-article .entertainment_article:hover,
+.main-article .foreign_article:hover
+{
+    transform: scale(0.95);
+}
+.politics_relate,
+.national_relate,
+.sports_relate,
+.entertainment_relate,
+.foreign_relate
+{
+    padding: 5px;
+    background-color: rgb(107, 107, 107);
+    height: auto;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 0 50px 0;
+    padding: 10px 17px;
+}
+.politics_relate a,
+.national_relate a,
+.sports_relate a,
+.entertainment_relate a,
+.foreign_relate a
+{
+    display: inline-block !important;
+    font-size: 15px;
+    color: whitesmoke;
+    text-decoration: underline;
+    margin: 5px 0;
+    font-family: playfair;
+}
+.politics_relate a:hover,
+.national_relate a:hover,
+.sports_relate a:hover,
+.entertainment_relate a:hover,
+.foreign_relate a:hover{
+    color: black;
+}
+.main-article .politics_article img,
+.main-article .national_article img,
+.main-article .sports_article img,
+.main-article .entertainment_article img,
+.main-article .foreign_article img
+{
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px black;
+}
+.main-article .politics_article h1,
+.main-article .national_article h1,
+.main-article .sports_article h1,
+.main-article .entertainment_article h1,
+.main-article .foreign_article h1
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 18px 15px;
+    font-size: 2.4vw;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+.main-article .politics_article h3,
+.main-article .national_article h3,
+.main-article .sports_article h3,
+.main-article .entertainment_article h3,
+.main-article .foreign_article h3
+{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: red;
+    font-size: 2vw;
+    padding: 2px 6px;
+    background-color: black;
+    transform: skew(-20deg);
+    border-radius: 5px;
+    margin: 15px;
+}
+.full-news h3{
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-variant: small-caps;
+    color: red;
+    width: auto;
+    padding: 2px 6px;
+    background-color: black;
+    transform: skew(-20deg);
+}
+.full-news h1{
+    font-size: 3.5vw;
+    font-weight: bolder;
+}
+.full-news p{
+    font-size: large;
+    margin: 8px 0;
+    text-align: justify;
+}
+.related{
+    font-size: 100%;
+    background-color: rgb(199, 199, 199);
+    border-left: 4px solid red;
+    padding: 8px 5px;
+}
+.related ul li{
+    padding: 5px 0;
+}
+/* ###############################
+ ### FOR FIRST COLUMN IN HTML ### 
+############################### */
+.right-handle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
+    margin: 0 15px;
+    width: 20%;
+    height: auto;
+    top: 0;
+    position: sticky;
+}
+.right-handle .head-column h3{
+    text-align: center;
+    font-size: 22px;
+    font-variant: small-caps;
+    color: white;
+    width: auto;
+    padding: 2px 2px;
+    background-color: black;
+    /* transform: skew(-20deg); */
+}
+.right-handle .head-column img{
+    width: 100%;
+    height: 200px;
+}
+.head-column{
+    margin-bottom: 12px;
+    background-color: white;
+    box-shadow: 1px 1px 4px black;
+    border-radius: 7px;
+    padding: 5px;
+}
+.head-column:hover{
+    background-color: rgb(206, 202, 202);
+}
+.right-handle .head-column h6{
+    font-size: 14px;
+}
+
+
+.search_result{
+    height: auto;
+}
+.search_result div img{
+    width: 15vw;
+    border-radius: 5px;
+}
+.search_result div{
+    background-color: grey;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+
+}
+/* ###############################
+ ### FOR THIRD COLUMN IN HTML ###
+        FOR MEDIA @1500PX
+############################### */
+
+.trend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
+    margin-left: 12px;
+    width: 15%;
+    height: auto;
+}
+.trend div{
+    transition: 0.8s;
+    border-radius: 15px;
+    background-color: rgb(214, 213, 213);
+    margin: 0 0 10px 0;
+}
+.trend div:hover{
+    background-color: gray;
+    transform: scale(0.9);
+}
+.trend img{
+    border-radius: 15px;
+    height: 200px;
+}
+.trend h3{
+    color: red;
+    font:bolder 40px Blackadder ITC;
+}
+.trend h6{
+    color: black;
+    text-decoration: underline;
+    font:bolder 14px cambria;
+    padding: 0 10px 10px 10px;
+}
+
+/* ###############################
+ ### FOR FULL SCREEN FOOTER IN HTML ### 
+############################### */
+.main-footer{
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    background-color: red;
+}
+.media img{
+    width: 300px;
+}
+.media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.social button{
+    transition: 0.5s;
+    cursor: pointer;
+    font: bolder 16px bebas;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 8px 90px;
+    margin: 0 0 8px 0;
+}
+.social button:hover{
+    border: 2px solid white;
+}
+
+.social img{
+    width: 40px;
+    margin: 0 4px;
+}
+.links{
+    margin: auto;
+    width: 70%;
+    padding: 10px 0;
+    color: white;
+    font-weight: 900;
+    display: grid;
+    grid-template-columns: 20% 20%  20%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 70px;
+}
+.links a{
+    font-size: 18px;
+    color: black;
+}
+.links a:hover{
+    color: white;
+}
+
+
+
+
+
+
+        /* ###############################
+        ### FOR MOBILE DEVICE (1200px) ### 
+        ############################### */
+@media screen and (max-width:1200px) {
+    .top{
+        width: 100%;
+        height: 180px;
+    }
+    .top h1{
+        font-size: 180%;
+    }
+    .menu{
+        padding: 5px 0 0 0;
+        align-items: initial;
+        width: 100%;
+        height: 80px;
+    }
+    .menu a{
+        width: 900;
+        font-size: 2vw;
+        margin: 5px 10px;
+        height: 3vh;
+    }
+    .logo img{
+        margin: -5px 5px;
+        width: 150px;
+        height: 40px;
+    }
+    .trend{
+        width: 300px;
+    }
+    .search{
+        position: absolute;
+        top: 45px;
+        left: 5px;
+    }
+    .search input{
+        width: 100%;
+        border: 1px solid black;
+        background-color: white;
+        padding: 6px 8px;
+        outline: none;
+    }
+    .search button{
+        font-size: 14px;
+        background-color: black;
+        padding: 6px;
+        border: 1px solid transparent;
+    }
+        /* ### MAIN SECTION @MEDIA 1200PX ### 
+        ### CONTENTS IN MAIN SECTION ###*/
+    .main-article{
+        padding: 0 10px;
+    }
+    .full-news h1{
+        font-size: 4vw;
+        font-weight: bolder;
+    }
+    .full-news p{
+        text-align: justify;
+        font-size: 24px;
+        margin: 25px 0;
+    }
+    .trend h3{
+        color: red;
+        font:bolder 3.5vw Blackadder ITC;
+    }
+
+        /* ### FOOTER SIDE ### 
+        ### FOR MEDIA @ 1200PX ###*/
+    .media{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: auto;
+        margin: auto;
+    }
+    .social img:hover{
+        filter: invert(100);
+    }
+    .links a{
+        font: bold 18px cambria;
+        color: black;
+    }
+}
+
+
+        /* ###############################
+        ### FOR MOBILE DEVICE (600px) ### 
+        ############################### */
+@media screen and (max-width:600px){
+    .trend, .right-handle{
+        display: none;
+    }
+    .bigwrap{
+        overflow: hidden;
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+    .top{
+        height: 150px;
+    }
+    .top img{
+        width: 50%;
+    }
+    .top h1{
+        font-size: 3.5vw;
+    }
+    .mainsection{
+        padding: 0;
+    }
+    .logo img{
+        position: absolute;
+        float: right;
+        top: 150px;
+        right: 0;
+        margin: 0 10px 0 0;
+        width: 150px;
+        height: 60px;
+    }
+    .search{
+        top: 338px;
+        margin: 0 10px 0 10px;
+        position: absolute;
+    }
+    .search input, .search input:focus{
+        width: 200px; 
+    }
+    .menu{
+        position: relative;
+        display: block;
+        padding: 10px;
+        position: static;
+        width: 100%;
+        height: 230px;
+        box-shadow: none;
+    }
+    .menu a{
+        display: block;
+        font-size: 25px;
+        margin: 12px 5px;
+        width: 200px;
+        height: 22px;
+    }
+    .mainsection .main-article{
+        margin: 15px;
+        padding: 0;
+        border-left: 0 solid transparent;
+    }
+    .main-article .politics_article,
+    .main-article .national_article,
+    .main-article .sports_article,
+    .main-article .entertainment_article,
+    .main-article .foreign_article
+    {
+        padding: 5px;
+        height: 50vh;
+    }
+    .main-article .politics_article img,
+    .main-article .national_article img,
+    .main-article .sports_article img,
+    .main-article .entertainment_article img,
+    .main-article .foreign_article img
+    {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .main-article .politics_article h1,
+    .main-article .national_article h1,
+    .main-article .sports_article h1,
+    .main-article .entertainment_article h1,
+    .main-article .foreign_article h1
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 18px 15px;
+        font-size: 25px;
+        color: white;
+        text-shadow: 1px 1px 4px black;
+    }
+    .main-article .politics_article h3,
+    .main-article .national_article h3,
+    .main-article .sports_article h3,
+    .main-article .entertainment_article h3,
+    .main-article .foreign_article h3
+    {
+        font-size: 20px;
+        padding: 2px 6px;
+        border-radius: 5px;
+        margin: 15px;
+    }
+
+        /* ### MAIN SECTION @MEDIA 600PX ### 
+        ### CONTENTS IN MAIN SECTION ###*/
+    .main-article{
+        padding: 5px 10px;
+        width: 100%;
+        height: auto;
+        background-color: white;
+    }
+    .full-news h3{
+        font-size: 18PX;
+        font-variant: small-caps;
+        color: red;
+        width: 80px;
+        padding: 2px 6px;
+        background-color: black;
+        transform: skew(-20deg);
+    }
+    .full-news h1{
+        font-size: 5vw;
+        font-weight: bolder;
+    }
+    .full-news p{
+        text-align: justify;
+        font-size: 24px;
+        margin: 25px 0;
+    }
+    .related{
+        font-size: 100%;
+        background-color: rgb(199, 199, 199);
+        border-left: 4px solid red;
+        padding: 8px 5px;
+    }
+    
+    /* ### FOOTER SIDE ### 
+    ### FOR MEDIA @ 600PX ###*/
+    .main-footer{
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        background-color: red;
+    }
+    .media{
+        width: 210px;
+        height: auto;
+        margin: auto;
+    }
+    .media img{
+        width: 100%;
+    }
+    .social{
+        margin: none;
+        width: 100%;
+    }
+    .social button{
+        font-family: bebas;
+        font-weight: bolder;
+        background-color: white;
+        border: transparent;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 8px 71px;
+        margin: 0 0 8px 0;
+    }
+    .social button:hover{
+        border: none;
+        color: red;
+    }
+    .social img{
+        width: 30px;
+        margin: 0 4px;
+    }
+    .links{
+        display: grid;
+        margin: auto;
+        width: 300px;
+        padding: 10px 0 0 40px;
+        grid-template-columns: auto auto;
+        column-gap: 40px;
+    }
+    .links a{
+        font: bold 18px bebas;
+        margin: 3px 0;
+        color: black;
+    } 
+    /* ################## CATEGORY ##################### */
+    
+}

@@ -1,0 +1,202 @@
+.category{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.category_heading h1{
+    text-align: center;
+    color: red;
+    font-size: 25px;
+    padding: 2px 6px;
+    background-color: black;
+    transform: skew(-20deg);
+    border-radius: 5px;
+    margin: 15px;
+}
+.category div{
+    background-color: white;
+    margin: 10px;
+    padding: 7px;
+    height: 50vh;
+    border-radius: 7px;
+    box-shadow: 1px 1px 4px black;
+    transition: 0.5s;
+
+}
+.category div:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.category h1{
+    font-size: 1vw;
+    height: auto;
+    padding: 0 0 10px 0;
+    /* text-align: justify; */
+}
+.category h5{
+    font-size: 0.7vw;
+    color: gray;
+}
+.category h4{
+    color: rgb(75, 2, 2);
+    font-size: 1vw;
+    font-family: playfair;
+}
+.category div img{
+    width: 100%;
+    height: 60%;
+}
+.page-links{
+    text-align: center;
+    margin: 10px 0;
+}
+ .page-links a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 3px;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px black;
+}
+ .active{
+ background-color: black !important;
+ color: white !important;
+ box-shadow: 1px 1px 4px white !important;
+}
+.nav_active{
+    color: black !important;
+}
+ .page-links a:hover{
+   background-color: black;
+   color: white;
+}
+
+/* ###################### Full-News #################### */
+.fullnews{
+    width: auto;
+}
+.fullnews img{
+    width: 100%;
+    height: 400px;
+}
+.fullnews h1{
+    font-size: 2.5vw;
+    margin: 5px 0;
+}
+.fullnews h5{
+    font-size: 1vw;
+    margin: 5px 0;
+}
+.fullnews h4{
+    color: navy;
+    font: bolder 1.3vw courier new;
+    margin: 5px 0;
+}
+.fullnews p{
+    margin: 10px 0;
+    text-align: justify;
+    font-size: 18px;
+    font-family: serif;
+}
+
+/* ###################### ADMIN ######################### */
+.form-wrap form{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+}
+  .form-wrap form span{
+    font:bolder 15px courier new;
+}
+  form .title-author{
+    outline-style: none;
+    border-radius: 8px;
+    height: 35px;
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    background-color: transparent;
+    border: 1px solid red;
+}
+  .form-wrap form select{
+    width: 50%;
+    height:50px;
+    border-radius: 7px;
+    outline-style: none;
+    border: 1px solid red;
+    background-color: transparent;
+    margin: 7px 0;
+}
+  form textarea{
+    outline-style: none;
+    border-radius: 8px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    background-color: transparent;
+    border: 1px solid red;
+}
+  .file{
+    outline-style: none;
+    border-radius: 8px;
+    height: 40px;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+    background-color: transparent;
+    border: 1px solid red;
+}
+  .sbtn{
+    outline-style: none;
+    border-radius: 5px;
+    height: 35px;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    background-color: greenyellow;
+    border: 1px solid white;
+}
+  .sbtn:hover{
+    cursor: pointer;
+    background-color: rgb(112, 184, 5);
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    .category{
+        grid-template-columns: auto auto;
+        margin: 0 -10px;
+    }
+    .category div h1{
+        font-size: 2.5vw;
+    }
+    .category div h5{
+        font-size: 2vw;
+    }
+    .category div h4{
+        font-size: 2.3vw;
+    }
+    .fullnews img{
+        width: 100%;
+        height: 300px;
+    }
+    .fullnews h1{
+        font-size: 25px;
+        text-align: justify;
+    }
+    .fullnews h5{
+        font-size: small;
+    }
+    .fullnews h4{
+        font-size: medium;
+    }
+    .fullnews p{
+        font-size: 20px;
+    }
+}

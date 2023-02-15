@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/main1.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <title>Administration Deve</title>
+</head>
+<body>
+<div class="bigwrap">
+    <div class="top">
+        <img src="../images/Logo3.png" alt="logo">
+        <h1 style="text-align: center;"><em>Getting You Acquainted With The Happenings!</em></h1>
+    </div>
+
+    <div class="menu">
+        <div class="logo"><img src="../images/Logo2.png" alt="" onclick="myfunction()"></div>
+            <a href="/National">National</a>
+            <a href="/Politics">Politics</a>
+            <a href="/Sports">Sports</a>
+            <a href="/Entertainment">Entertainment</a>
+            <a href="/Foreign">Foreign</a>
+        <div class="search">
+            <input type="text" placeholder="Search"><button>Search</button>
+        </div>
+    </div>
+
+  <div class="form-wrap" style="margin-top: 30px;">
+      <form method="POST">
+          <input class="title-author" id="title" type="text" name="Admin_name" required placeholder="Admin-Username"><br>
+          <input class="title-author" id="author" type="text" name="Admin_pwd" required placeholder="Admin-Password"><br>
+          <input class="sbtn" type="submit" value="LOG IN">
+      </form>
+  </div>
+         <!-- #### FOOTER #### -->
+    <div class="main-footer">
+        <div class="media">
+            <img src="../images/logo.png" alt="logo">
+                <div class="social">
+                    <button>Subscribe</button><br>
+                    <a href=""><img src="../images/facebook.png" alt="facebook"></a>
+                    <a href=""><img src="../images/whatsapp.png" alt="whatsapp"></a>
+                    <a href=""><img src="../images/instagram.png" alt="instagram"></a>
+                    <a href=""><img src="../images/twitter.png" alt="twitter"></a>
+                    <a href=""><img src="../images/tube.png" alt="youtube"></a>
+                </div>
+        </div>
+        <div class="links">
+            <a href="/National">National</a>
+            <a href="/Politics">Politics</a>
+            <a href="/Entertainment">Entertainment</a>
+            <a href="/Foreign">Foreign</a>
+            <a href="/Sports">Sports</a>
+            <a href="">Contact Us</a>
+            <a href="">About Us</a>
+            <a href="">Advertise</a>
+        </div>
+        <p style="text-align: center;font-weight: bolder; background-color: black;width: 100%;color: red; padding: 10px 0;">Copyright © <span style="color:white">Learned's Blog Ltd</span></p>
+    </div>
+
+</div> 
+<script>
+    function myfunction(){
+        window.location.href = '/'
+    }
+</script> 
+<script type="text/javascript" src="./js/main.js"></script> 
+</body>
+</html>
