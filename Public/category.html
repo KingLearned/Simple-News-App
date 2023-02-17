@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../images/blog-icon.png">
+    <link rel="icon" type="image/x-icon" href="../images/blog-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main1.css">
     <link rel="stylesheet" href="../css/category.css">   
     <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/category.js"></script>
     <script type="text/javascript" src="../js/paging.js"></script>
     <title>Learned's Blog</title>
 </head>
 <body>
-<div class="pre_loader"><img src="../images/Logo3.png" alt="" class="pre_logo"><img src="../images/loading.gif" alt=""></div>
+<!-- <div class="pre_loader"><img src="../images/Logo3.png" alt="" class="pre_logo"><img src="../images/loading.gif" alt=""></div> -->
 <div class="bigwrap">
     <div class="top">
         <img src="../images/Logo3.png" alt="logo">
@@ -21,12 +24,12 @@
     </div>
     <!----------        NAVIGATION-BAR      ---------->     
     <div class="menu">
-        <div class="logo"><img src="../images/Logo2.png" alt="" onclick="Home()"></div>
-            <a href="/National" class="nav0">National</a>
-            <a href="/Politics" class="nav1">Politics</a>
-            <a href="/Sports" class="nav2">Sports</a>
-            <a href="/Entertainment" class="nav3">Entertainment</a>
-            <a href="/Foreign" class="nav4">Foreign</a>
+        <div class="logo"><img src="../images/Logo2.png" alt="" onclick="window.location='/'"></div>
+            <a href="/National" class="nav">National</a>
+            <a href="/Politics" class="nav">Politics</a>
+            <a href="/Sports" class="nav">Sports</a>
+            <a href="/Entertainment" class="nav">Entertainment</a>
+            <a href="/Foreign" class="nav">Foreign</a>
         <div class="search">
             <form method="POST" style="display: flex;">
                 <input type="text" placeholder="Search" name="seard_W"><button>Search</button>
@@ -46,16 +49,20 @@
         <!---------------       SECOND-(2)-COLUMN      --------------->
         <div class="main-article">
             <div class="category_heading">
-                <h1 class="category_name"></h1>
+                <h1 class="category_name">Politics</h1>
             </div>
             <!----------        NEWS-THUMBNAIL      ---------->
-            <div class="category">
-                <!-- <div>
-                    <h1>11th Peace Achievers International Awards: Peter Obi, Obi Cubana and others</h1>
-                    <img src="./images/Port.jpg" alt="okowa">
-                    <h5>Published On Thursday, 25 Aug, 2022</h5>
-                    <h4>Author, By: Edidiong Ikpoto</h4>
-                </div>-->
+            <div class="container">
+                <div class="row category">
+                    <!-- <div class="col-lg-4 col-md-6">
+                        <div class="div">
+                            <h1>11th Peace Achievers International Awards: Peter Obi, Obi Cubana and others</h1>
+                            <img src="./uploads/Buhari-m.jpg" alt="okowa">
+                            <h5>Published On Thursday, 25 Aug, 2022</h5>
+                            <h4>Author, By: Edidiong Ikpoto</h4>
+                        </div>
+                    </div> -->
+                </div>
             </div>
             <!----------        PAGINATION      ---------->
             <div class="page-links">
@@ -65,7 +72,7 @@
 
         <!---------------       THIRD-(3)-COLUMN      --------------->
         <div class="trend">
-            <h3> <<< Advert >>> </h3>
+            <h3><<< Advert >>></h3>
         </div>
     </div>
 
@@ -94,13 +101,7 @@
         </div>
         <p style="text-align: center;font-weight: bolder; background-color: black;width: 100%;color: red; padding: 10px 0;">Copyright © <span style="color:white">Learned's Blog Ltd</span></p>
     </div>
-
-</div>  
-<!-- <script>
-    function Home(){
-        window.location.href = '/'
-    }
-</script>  -->
-<script type="text/javascript" src="../js/preloader.js"></script>
+</div>
+<!-- <script type="text/javascript" src="../js/preloader.js"></script> -->
 </body>
 </html>

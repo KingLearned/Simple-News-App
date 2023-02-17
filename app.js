@@ -258,8 +258,8 @@ function News() {
         const query1 = "SELECT * FROM `trends` ORDER BY `publish` DESC"
         MYSQL.query(query1, (err, result) => {
             if(result){
-                var ResPage1 = Math.floor(result.length/4)
-                var ResPage = result.length%4
+                let ResPage1 = Math.floor(result.length/4)
+                let ResPage = result.length%4
                 if(ResPage == 0){
                     ResPage1 = ResPage1
                 }
@@ -285,32 +285,32 @@ function News() {
                                 req.session.word = SearchWord
                                 res.redirect('/search')
                             }else{
-                            const query = "SELECT * FROM `trends` WHERE `category`='National' ORDER BY `trends`.`publish` DESC"
-                            MYSQL.query(query, (err, National) => {
-                                const query = "SELECT * FROM `trends` WHERE `category`='Politics' ORDER BY `trends`.`publish` DESC"
-                                MYSQL.query(query, (err, Politics) => {
-                                    const query = "SELECT * FROM `trends` WHERE `category`='Foreign' ORDER BY `trends`.`publish` DESC"
-                                    MYSQL.query(query, (err, Foreign) => {
-                                        const query = "SELECT * FROM `trends` WHERE `category`='Sports' ORDER BY `trends`.`publish` DESC"
-                                        MYSQL.query(query, (err, Sports) => {
-                                            const query = "SELECT * FROM `trends` WHERE `category`='Entertainment' ORDER BY `trends`.`publish` DESC"
-                                            MYSQL.query(query, (err, Entertainment) => {
-                                                const Pend = 4*n
-                                                const no = Pend - 4
-                                                res.json({Nat: National,
-                                                Poli: Politics,
-                                                Fore: Foreign,
-                                                Enment: Entertainment,
-                                                Sport: Sports,
-                                                link: 'National',
-                                                News: National, Pstart: no, Pstop: Pend
-                                            })
+                                const query = "SELECT * FROM `trends` WHERE `category`='National' ORDER BY `trends`.`publish` DESC"
+                                MYSQL.query(query, (err, National) => {
+                                    const query = "SELECT * FROM `trends` WHERE `category`='Politics' ORDER BY `trends`.`publish` DESC"
+                                    MYSQL.query(query, (err, Politics) => {
+                                        const query = "SELECT * FROM `trends` WHERE `category`='Foreign' ORDER BY `trends`.`publish` DESC"
+                                        MYSQL.query(query, (err, Foreign) => {
+                                            const query = "SELECT * FROM `trends` WHERE `category`='Sports' ORDER BY `trends`.`publish` DESC"
+                                            MYSQL.query(query, (err, Sports) => {
+                                                const query = "SELECT * FROM `trends` WHERE `category`='Entertainment' ORDER BY `trends`.`publish` DESC"
+                                                MYSQL.query(query, (err, Entertainment) => {
+                                                    const Pend = 7*n
+                                                    const no = Pend - 7
+                                                    res.json({Nat: National,
+                                                    Poli: Politics,
+                                                    Fore: Foreign,
+                                                    Enment: Entertainment,
+                                                    Sport: Sports,
+                                                    link: 'National',
+                                                    News: National, Pstart: no, Pstop: Pend
+                                                })
+                                                })
                                             })
                                         })
                                     })
                                 })
-                            })
-                        }
+                            }
                         })
                         // ######################### FOR POLITICS CATEGORY #############################
                         app.post(`/Politics/p%20a%20g%20e%20${n}%20of%20n%20e%20w%20s`, (req, res) => {
@@ -329,8 +329,8 @@ function News() {
                                         MYSQL.query(query, (err, Sports) => {
                                             const query = "SELECT * FROM `trends` WHERE `category`='Entertainment' ORDER BY `trends`.`publish` DESC"
                                             MYSQL.query(query, (err, Entertainment) => {
-                                                var Pend = 4*n
-                                                var no = Pend - 4
+                                                const Pend = 7*n
+                                                const no = Pend - 7
                                                 res.json({Nat: National,
                                                 Poli: Politics,
                                                 Fore: Foreign,
@@ -365,8 +365,8 @@ function News() {
                                             MYSQL.query(query, (err, Sports) => {
                                                 const query = "SELECT * FROM `trends` WHERE `category`='Entertainment' ORDER BY `trends`.`publish` DESC"
                                                 MYSQL.query(query, (err, Entertainment) => {
-                                                    const Pend = 4*n
-                                                    const no = Pend - 4
+                                                    const Pend = 7*n
+                                                    const no = Pend - 7
                                                     res.json({Nat: National,
                                                     Poli: Politics,
                                                     Fore: Foreign,
@@ -400,8 +400,8 @@ function News() {
                                             MYSQL.query(query, (err, Sports) => {
                                                 const query = "SELECT * FROM `trends` WHERE `category`='Entertainment' ORDER BY `trends`.`publish` DESC"
                                                 MYSQL.query(query, (err, Entertainment) => {
-                                                    const Pend = 4*n
-                                                    const no = Pend - 4
+                                                    const Pend = 7*n
+                                                    const no = Pend - 7
                                                     res.json({Nat: National,
                                                     Poli: Politics,
                                                     Fore: Foreign,
@@ -435,8 +435,8 @@ function News() {
                                             MYSQL.query(query, (err, Sports) => {
                                                 const query = "SELECT * FROM `trends` WHERE `category`='Entertainment' ORDER BY `trends`.`publish` DESC"
                                                 MYSQL.query(query, (err, Entertainment) => {
-                                                    const Pend = 4*n
-                                                    const no = Pend - 4
+                                                    const Pend = 7*n
+                                                    const no = Pend - 7
                                                     res.json({Nat: National,
                                                     Poli: Politics,
                                                     Fore: Foreign,
@@ -457,7 +457,6 @@ function News() {
             }
         })
 }News()
-// ###################################################################################
-// ###################################################################################
+
 
 app.listen(PORT, () => console.log(`Server Running on Port ${PORT}`))

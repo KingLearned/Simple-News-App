@@ -120,7 +120,7 @@ body{
     margin: 0 0 0 15px;
     padding: 5px 0 0 25px;
     border-left: 2px solid gray;
-    width: 55%;
+    width: 70%;
     height: auto;
 }
 /* ############################################## */
@@ -261,7 +261,7 @@ body{
     align-items: center;
     padding: 0 5px;
     margin: 0 15px;
-    width: 20%;
+    width: 15%;
     height: auto;
     top: 0;
     position: sticky;
@@ -321,7 +321,6 @@ body{
     padding: 0 5px;
     margin-left: 12px;
     width: 15%;
-    height: auto;
 }
 .trend div{
     transition: 0.8s;
@@ -339,7 +338,8 @@ body{
 }
 .trend h3{
     color: red;
-    font:bolder 40px Blackadder ITC;
+    text-align: center;
+    font:bolder 30px Blackadder ITC;
 }
 .trend h6{
     color: black;
@@ -554,7 +554,7 @@ body{
         display: block;
         font-size: 25px;
         margin: 12px 5px;
-        width: 200px;
+        width: max-content;
         height: 22px;
     }
     .mainsection .main-article{
